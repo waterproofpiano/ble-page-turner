@@ -51,12 +51,12 @@ void getValue() {
   if ((millis() - lastDebounceTime) > debounce) {
     buttonStatus = reading;
     if (buttonStatus == 0 && previousButtonStatus == 1) {
-      MIDI.sendNoteOn(66, 127, midiChannel);
-      Serial.println("Note on");
-    } else if (buttonStatus == 1 && previousButtonStatus == 0) {
-      MIDI.sendNoteOff(66, 127, midiChannel);
-      Serial.println("Note OFF");
-    }
+      MIDI.sendProgramChange(16, midiChannel);
+      //Serial.println("Note on");
+    } 
+    //else if (buttonStatus == 1 && previousButtonStatus == 0) {
+      //Serial.println("Note OFF");
+    //}
     previousButtonStatus = buttonStatus;
   }
   previousReading = reading;
