@@ -52,11 +52,8 @@ void getValue() {
     buttonStatus = reading;
     if (buttonStatus == 0 && previousButtonStatus == 1) {
       MIDI.sendProgramChange(16, midiChannel);
-      //Serial.println("Note on");
-    } 
-    //else if (buttonStatus == 1 && previousButtonStatus == 0) {
-      //Serial.println("Note OFF");
-    //}
+      Serial.println("Program change sent");
+    }
     previousButtonStatus = buttonStatus;
   }
   previousReading = reading;
