@@ -12,7 +12,7 @@ BLEMIDI_CREATE_INSTANCE("Page Turner", MIDI)
 
 unsigned long lastDebounceTime = 0;
 unsigned long debounce = 15;
-const int forwardPin = 6;//12 for WROOM
+const int forwardPin = D9;//12 for WROOM, D9 for XIAO_ESP32C3
 const int LED_BUILTIN = 13;
 
 int midiChannel = 1;
