@@ -8,7 +8,7 @@
 
 //create instance, updating name
 
-BLEMIDI_CREATE_INSTANCE("Page Turner", MIDI)
+BLEMIDI_CREATE_INSTANCE("ESP32C3 Page Turner", MIDI)
 
 unsigned long lastDebounceTime = 0;
 unsigned long debounce = 15;
